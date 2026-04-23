@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+
+
+*{
+  margin:0;
+  padding:0;
+}
+
+
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+
+.nav{
+  width:100%;
+  height:8vh;
+  position:fixed;
+  top:0;
+  left:0;
+  background:linear-gradient(to right, #5779E2, #105DB7);
+  box-shadow:0 5px 5px rgba(0,0,0,0.2);
+  z-index:1000;
+}
+
+.nav ul{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  height:8vh;
+  padding:0 20px;
+}
+
+.nav li{
+  display:flex;
+  align-items:center;
+  padding:0 15px;
+  transition:0.3s;
+}
+
+.nav li:hover{
+  transform:scale(1.15);
+}
+
+.nav ul li:first-child{
+  margin-left:3%;
+  margin-right: 50vw;
+}
+
+.nav a{
+  text-decoration:none;
+  color:white;
+  display:flex;
+  text-align: center;
+  align-items:center;
+  font-size: 18px;
+}
+
+.img{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  border:2px solid black;
+}
+
+
+.sub-menu{
+  width:100%;
+  height:8vh;
+  background:#5b6f2a;
+  position:fixed;
+  top:8vh;
+  display:flex;
+  z-index:999;
+}
+
+
+.sub-menu a{
+  flex:1; 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  border: 2px solid black;
+  border-collapse: collapse;
+  transition:0.3s;
+}
+
+
+.sub-menu a:last-child{
+  border-right:none;
+}
+
+
+.sub-menu a:hover{
+  background:#6f8433;
+}
+
+
+.sections{
+  margin-top:110px; 
+}
+
+.sections > div{
+  min-height:100vh;
+  top: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+
+#latest{
+  background-color: #7696C6;
+  color:white;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+
+.about-text{
+  flex:1;
+  margin-left: 3%;
+  text-align:left;
+}
+
+.about-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.about-image img{
+  max-width:250px;
+  border-radius:20px;
+  border:2px solid white;
+}
+
+
+#birth {
+      background-image: url("itachi2.jpg");
+      flex-direction: column;
+      background-size: cover;
+      min-height: 100vh;
+      
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h2 {
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .calendar {
+      width: 100%;
+      max-width: 999px;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      background-image:url("itachi.jpg");
+      background-size: cover;
+      
+    }
+
+    /* Rotate effect on hover */
+    
+
+    .calendar th {
+      background-image: linear-gradient(to right,#bd2230,#837cba);
+      border: 1px solid #eee;
+      border-right: 20px;
+      height: 100px;
+      font-size: 2rem;
+      border-collapse: collapse;
+      color: white;
+      padding: 10px;
+    }
+
+    .calendar td {
+      height: 105px;
+      border-collapse: collapse;
+      border: 1px solid #eee;
+      width: 5px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .calendar td:nth-child(1),
+    .calendar td:nth-child(7) {
+      color: red;
+      font-weight: bold;
+    }
+
+    .calendar td:hover {
+      background:#3a3d8f;
+      transform: scale(1.1) rotate(360deg);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      color: red;
+    }
+
+    .calendar td:nth-child(1):hover,
+    .calendar td:nth-child(7):hover {
+      background: whitesmoke;
+      transform: scale(1.1) rotate(360deg);
+      color:red;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .birthday {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      background: orange;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .birthday:hover {
+      background: #ff4d4d;
+      transform: scale(1.3) rotate(-10deg);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    #educ {
+    min-height: 100vh;
+      
+    }
+    #carouselExampleDark {
+    width: 100%;
+      
+    }
+    .carousel {
+      overflow: hidden;
+      }
+      .carousel-item img {
+        height: 100vh;  
+        width: 100%;
+        object-fit: cover;
+        
+      }
+      .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;          
+      gap: 50px;         
+      margin-top: 20px;
+      
+    }
+    #skill{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;   
+      justify-content: flex-start; 
+      align-items: center;      
+    }
+    .MG {
+      background: #dfe6e9;
+      padding: 30px 50px;   /* adjust top padding */
+      margin: 0;
+      text-align: center;
+      width: 100%;
+      
+    }
+    .MG h1{
+      font-size: 40px;
+      color: #2d3436;
+    }
+    #skill h2 {
+      margin-bottom: 20px;
+      color: black;
+      text-align: center;
+    }
+      
+    .card {
+      width:32rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      
+    }
+    .card:hover {
+      transform: scale(1.09);
+      
+    }
+    .card img {
+      widows: 100%;
+      min-width: 100%;
+      height: 450px;
+      object-fit: cover;
+      filter: brightness(90%);
+      transition: 0.3s;
+      
+    }
+    .card:hover img {
+      filter: brightness(100%);
+      
+    }
+    .card-body {
+      padding: 10px;
+      
+    }
+</style>
+</head>
+
+<body>
+
+
+<header class="nav">
+  <ul>
+    <li><a href="#">MY PORTFOLIO</a></li>
+    <li><a href="#"><img src="JC2.jpg" class="img"></a></li>
+    <li><a href="indexJC.html">HOME PAGE</a></li>
+    <li><a href="aboutme.html">ABOUT ME</a></li>
+    <li><a href="Contact.html">CONTACTS</a></li>
+    <li><a href="Profile.html">PROFILE</a></li>
+  </ul>
+</header>
+
+
+<div class="sub-menu">
+  <a href="#latest">Latest</a>
+  <a href="#birth">Birthday</a>
+  <a href="#educ">Education</a>
+  <a href="#skill">Skills</a>
+</div>
+
+
+<div class="sections">
+
+  
+  <div id="latest">
+    <div class="about-text">
+      <h1>So, Who am I?</h1>
+      <p><b>I am  JON CLYDE O. BUDOC currently studying Bachelor of Science in Information Technology (BSIT). My interests include web development, programming, and IT solutions.</b></p>
+    </div>
+    <div class="about-image">
+      <img src="JC2.jpg">
+    </div>
+  </div>
+
+  
+  <div id="birth">
+  <h2>MARCH 20, 2006<br>My Birthday</h2>
+  
+  <table class="calendar">
+    <tr>
+      <th>Sun</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td><span class="birthday">20</span></td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>30</td>
+      <td>31</td>
+      <td>🌕</td>
+      <td>🌔</td>
+      <td>🌑</td>
+      <td>🌖</td>
+    </tr>
+  </table>
+</div>
+
+  
+<div id="educ">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <a href="LCS.html"><img src="LCS.jpg" class="d-block w-100" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <a href="LNHS.html"><img src="lnhs_bg.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block"></a>
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="ASC2.html"><img src="ASC.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block"></a>
+      
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<div id="skill">
+    <div class="MG">
+  <h1>Skill</h1>
+  <p>These are my skills, which I am passionate about enhancing and applying./p>
+</div>
+
+  <div class="card-container">
+
+    <div class="card">
+      <img src="ts.png" class="card-img-top" alt="">
+      <div class="card-body">
+        <h2>Computer Troubleshooting</h2>
+        <p class="card-text"></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="wd.jpg" class="card-img-top" alt="">
+      <div class="card-body">
+        <h2>Web Developer</h2>
+        <p class="card-text"></p>
+      </div>
+    </div>
+      <div class="card">
+      <img src="prog.jpg" class="card-img-top" alt=" 2">
+      <div class="card-body">
+        <h2>Programmer</h2>
+        <p class="card-text"></p>
+      </div>
+      
+    </div>
+     <div class="card">
+      <img src="cook.jpg" class="card-img-top" alt=" 2">
+      <div class="card-body">
+        <h2>cook</h2>
+        <p class="card-text"></p>
+      </div>
+    </div>
+    </div>
+
+</body>
+</html>

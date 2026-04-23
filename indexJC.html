@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MY PAGE</title>
+
+  <!-- External CSS for Navbar -->
+  <link rel="stylesheet" href="styleJC.css">
+
+  
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-image: linear-gradient(to right, #5779E2, #105DB7);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .qoute {
+      border: 3px solid yellow;
+      padding: 10px;
+      width: 50%;
+      height: 25hv;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: auto;
+      border-radius: 10px;
+      color: black;
+      font-size: 24px;
+      align-content: center;
+      transition: 0.5s;
+    }
+
+    .qoute:hover {
+      background-color: red;
+      animation-name: JC;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes JC {
+      from { background-color: red; }
+      to { background-color: yellow; }
+    }
+
+    div {
+      text-align: center;
+      flex: 1;
+      margin-top: 20vh;
+    }
+
+    footer {
+      background-color: #4874B6;
+      color: black;
+      font-size: 10px;
+      margin-top: auto;
+      text-align: left;
+      padding: 10px;
+    }
+
+    footer:hover {
+      background-color: #ff8512;
+      color: white;
+    }
+
+    .NAME{
+      font-size: 2vw;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    .intro {
+      font-size: 9vh;
+      color: yellow;
+      text-shadow: 2px 2px 5px black;
+     font-family: Times New Roman; 
+    }
+  </style>
+</head>
+
+<body style="background-image: url('BG1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+  
+  <header>
+    <ul>
+      <li><a href="">MY PORTFOLIO</a></li>
+      <li><a href=""><img src="JC2.jpg" alt="logo"></a></li>
+      <li><a href="indexJC.html">HOME PAGE</a></li>
+      <li><a href="aboutme.html">ABOUT ME</a></li>
+      <li><a href="">CONTACTS</a></li>
+      <li><a href="">PROFILE</a></li>
+    </ul>
+  </header>
+
+  
+  <div>
+    <h1 class="intro">
+      <span style="color:red;">Welcome</span> to My Website
+    </h1>
+
+    <p class="NAME"><b>
+      "I'm <span style="color: blue">Jon Clyde O. Budoc</span>,a <span style="color: darkred">BSIT</span> Student at <span style="color: yellow;">APAYAO STATE COLLEGE"</span></b></p>
+
+    <p class="qoute"><i>"TO BE CALM IS THE HIGHEST ACHIEVEMENT OF THE SELF"</i></p>
+  </div>
+
+  
+  <footer>
+    <p><b>
+      THE DEVELOPER: BUDOC, JON CLYDE O.<br>
+      All rights reserved ©2026
+      </b>
+    </p>
+  </footer>
+
+</body>
+</html>
